@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {})
   user_fs.associate = function (models) {
     // associations can be defined here
+    //user_fs.hasMany(models.users, { foreignKey: 'id' })
+    // user_fs.hasMany(models.users)
 
   }
   return user_fs

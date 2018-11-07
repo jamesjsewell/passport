@@ -20,16 +20,16 @@ db = require('./models')
 //   }
 // )
 db.user_fs.create(
-  {userId: 5,
-    friendshipId: 4
+  {userId: 3,
+    friendshipId: 2
   }
 )
 
-db.user_fs.create(
-  {userId: 3,
-    friendshipId: 4
-  }
-)
+// db.user_fs.create(
+//   {userId: 4,
+//     friendshipId: 3
+//   }
+// )
 
 // db.user_fs.create(
 //   {userId: 1,

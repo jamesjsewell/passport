@@ -11,7 +11,7 @@ db.friendship.findAll({
   include: [
     {
       model: db.users,
-      as: 'friends',
+      as: 'theFriend',
       through: 'user_fs',
       attributes: [
         'id', 'name'
@@ -23,7 +23,11 @@ db.friendship.findAll({
   where: {userId: 1}
 
 }).then(posts => {
-  console.log(posts[0].dataValues.friends)
+  posts.forEach(function(post){
+    var friendship = post.dataValues
+    var theFriend = friendship.theFriend[0].dataValues
+    console.log(theFriend.name)
+  })
 })
 
 app.listen(3001)
